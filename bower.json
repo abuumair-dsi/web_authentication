@@ -1,0 +1,28 @@
+{
+  "name": "authentication",
+  "authors": [
+    "Jihan <abuumair.dsi@gmail.com>"
+  ],
+  "description": "Shipping container system",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "^1.3.3",
+    "moment": "^2.13.0",
+    "angular-animate": "^1.5.6",
+    "ngstorage": "^0.3.10",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

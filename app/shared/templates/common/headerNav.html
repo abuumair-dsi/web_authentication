@@ -1,0 +1,44 @@
+<nav id="header" class="navbar navbar-default" role="navigation" ng-controller="headerNavCtrl">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="javascript:void(0)bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="./assets/images/logo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-show="isLoggedIn && show">
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-expanded="false">
+                        {{userInfo.first_name +" "+ userInfo.last_name }} <img ng-src="{{profile_url}}" style=" width: 34px; height: 34px;"> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ng-hide="applicant"  href="javascript:void(0)" ng-click="edit()">Edit Profile</a></li>
+                        <li><a ng-show="applicant"  href="javascript:void(0)" ng-click="editCndi()">Edit Profile</a></li>
+                        <li><a ng-show="applicant"  href="javascript:void(0)" ng-click="appliedJobs()">Applied Jobs</a></li>
+                        <li><a ng-show="Admin" href="javascript:void(0)"  ng-click="userManagement()">User Management</a></li>
+                        <li><a ng-show="interviewer" href="javascript:void(0)"  ng-click="timeSchedule()">Time Schedule</a></li>
+                        <li><a href="javascript:void(0)">Settings</a></li>
+                        <li><a ng-hide="applicant" href="javascript:void(0)" ng-click="questionBank()" >Question Bank</a></li>
+                        <li ng-hide="applicant" ><a href="javascript:void(0)" ng-click="questionnaires()">Questionnaires</a></li>
+                        <li><a ng-hide="applicant || interviewer" href="javascript:void(0)"  ng-click="jobBank()">Job post Bank</a></li>
+                        <li><a ng-hide="applicant || interviewer" href="javascript:void(0)"  ng-click="department()">Department</a></li>
+                        <li><a ng-hide="applicant || interviewer" href="javascript:void(0)"  ng-click="skills()">Skills</a></li>
+                        <li><a ng-hide="applicant || interviewer" href="javascript:void(0)"  ng-click="education()">Education</a></li>
+                        <!--<li><a ng-hide="applicant" href="javascript:void(0)">Professionals</a></li>-->
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+                    </ul>
+                </li>                
+            </ul>
+            <button ng-show="!isLoggedIn && show" class="btn btn-primary square-btn pull-right" ng-click="logIn()" style="margin-top:12px;">Login</button>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

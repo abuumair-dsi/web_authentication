@@ -1,0 +1,297 @@
+
+.custom-top-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*height: 65px;*/
+}
+.btnPersonList{
+    margin-top: 15px;
+    border-radius: 1px;
+}
+.duplicateLink{
+    font-size: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.position-header{
+    margin-top: 12px;
+}
+.margin-top-30{
+    margin-top: 30px;
+}
+.whitte-background{
+    background: white;
+}
+.darkbrown{
+    color: #932D38;
+}
+.fateYellowBackground{
+    background-color: #F7FFCC;
+}
+.app-footer{
+    padding-bottom: 30px;
+}
+.link-box{
+    border: 2px solid gainsboro;
+    padding: 10px;
+ }
+ .padding-bottom{
+     padding-bottom: 20px;
+ }
+ .padding-top{
+     padding-top: 20px;
+ }
+ .big-font{
+     font-size: 30px;
+ }
+ .medium-font{
+     font-size: 20px;
+ }
+ .social-icon{
+     padding-top: 20px;
+ }
+ .recruitOn{
+     color: #939393;
+     padding-top: 12px;
+     font-size: 18px;
+ }
+ .changeRecruit{
+     padding-top: 12px;
+ }
+ .notificationSidebar{
+     margin-left: 15px;
+ }
+ .recruit-date{
+     color: #FC4D4D;
+     padding-bottom: 0px;
+     font-weight: bold;
+ }
+ .small-top-padding{
+     padding-top: 10px;
+ }
+ .small-top-margin{
+     margin-top: 10px;
+ }
+ .interviewerImage{
+     width: 50px;
+     height: 45px;
+     padding-right: 5px;
+ }
+ .small-right-padding{
+     padding-right: 20px;
+     display: inline-block;
+     padding-bottom: 20px;
+ }
+
+ .btnQuestionnaires{
+     border-radius: 1px;
+ }
+ .iterviewQuestion{
+     color: #939393;
+     padding-bottom: 10px;
+ }
+ .candidate-recommender li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.recommend-photo{
+    width: 50px;
+}
+
+ /*social css*/
+ .social-icon a.btn{
+     color: #FFF;
+     padding: 3px 10px;
+ }
+ .btn-twitter {
+    background: #00acee;
+    border-radius: 0;
+    color: #fff
+}
+.btn-twitter:link, .btn-twitter:visited {
+    color: #fff
+}
+.btn-twitter:active, .btn-twitter:hover {
+    background: #0087bd;
+    color: #fff
+}
+.btn-facebook {
+    background: #3b5998;
+    border-radius: 0;
+    color: #fff
+}
+.btn-facebook:link, .btn-facebook:visited {
+    color: #fff
+}
+.btn-facebook:active, .btn-facebook:hover {
+    background: #30477a;
+    color: #fff
+}
+.btn-googleplus {
+    background: #e93f2e;
+    border-radius: 0;
+    color: #fff
+}
+.btn-googleplus:link, .btn-googleplus:visited {
+    color: #fff
+}
+.btn-googleplus:active, .btn-googleplus:hover {
+    background: #ba3225;
+    color: #fff
+}
+.btn-stumbleupon {
+    background: #f74425;
+    border-radius: 0;
+    color: #fff
+}
+.btn-stumbleupon:link, .btn-stumbleupon:visited {
+    color: #fff
+}
+.btn-stumbleupon:active, .btn-stumbleupon:hover {
+    background: #c7371e;
+    color: #fff
+}
+.btn-linkedin {
+    background: #0e76a8;
+    border-radius: 0;
+    color: #fff
+}
+.btn-linkedin:link, .btn-linkedin:visited {
+    color: #fff
+}
+.btn-linkedin:active, .btn-linkedin:hover {
+    background: #0b6087;
+    color: #fff
+}
+.question-bank{
+    margin: auto;
+    margin-top: 10px;
+    max-height: 150px;
+    min-height: 100px;
+    border: 1px solid #CCCCCC;
+    width: 100%;
+}
+.full-width{
+    width: 100%
+}
+
+.candidate-photo-height{
+    height: 30vh;
+}
+
+.full-height{
+    height: 100vh;
+}
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
+
+.scrollAreaAll {
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%
+}
+
+#scrollArea {
+    height: 100px;
+
+    overflow: auto;
+}
+
+#scrollArea1 {
+    height: 100px;
+    overflow: auto;
+}
+
+#scrollArea2 {
+    height: 250px;
+    overflow: auto;
+}
+
+#scrollArea3 {
+    height: 250px;
+    overflow: auto;
+}
+
+.icon{
+    background: url("../images/linkedin-icon.jpg") no-repeat 2px 3px;
+    padding-left:27px;
+}
+
+#bottom-bar {
+    font-size: 12px;
+    line-height: 23px;
+    color: #777777;
+}
+#bottom-bar {
+    position: relative;
+    z-index: 9;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+#upcomingEvent{
+    height: 265px;
+    overflow: auto;
+}
+
+.myform-content {
+    height: 100px;
+    max-height: 100px;
+}
+
+.myfocused {
+    height: 100px;
+    max-height: 100px;
+}
+html, body {
+    height: auto;
+}
+
+
+.name-input, textarea {
+    font-size: 1em;
+    width:100%;
+    display:block;
+    margin-bottom:4px;
+    border: none;
+    background-color: #f1f1f1;
+    position:relative;
+    display:block;
+    height:3em;
+    padding: 15px;
+    color:grey;
+@include border-radius(0px);
+}
+
+/*.md-scroll-mask{*/
+    /*z-index: 1500;*/
+/*}*/
+.md-virtual-repeat-container.md-autocomplete-suggestions-container{
+    z-index: 1200;
+}
+/*.md-visually-hidden{*/
+    /*z-index: 1500;*/
+/*}*/
+/*.wf-wrap {*/
+    /*max-width: 100%;*/
+    /*padding: 0 44px;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.wf-container-bottom, #bottom-bar.full-width-line {*/
+    /*border-top: 1px solid rgba(119,119,119,0.15);*/
+/*}*/
+
+/*.wf-float-left*/
+/*{ margin-left: 20px;}*/
+
+
+
