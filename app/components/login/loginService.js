@@ -5,7 +5,7 @@ app.service('loginService', ['baseService', '$localStorage', 'appUtilsFactory', 
 
     
     this.login = function (data, fun) {
-        baseService.login(appUtilsFactory.LOGIN_SESSION, data, 'POST', function (data) {
+        baseService.sendWithOutAuth(appUtilsFactory.LOGIN_SESSION, data, 'POST', function (data) {
             if (data != "Batman") {
                 $localStorage.session = data;
                 $localStorage.access_token = data.access_token;

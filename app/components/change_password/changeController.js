@@ -1,15 +1,14 @@
 /**
  * Created by jihan on 6/14/16.
  */
-app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', '$location',  function ($scope, $rootScope, loginService, $location) {
+app.controller('changeController', ['$scope', '$rootScope', 'changeService', function ($scope, $rootScope, loginService) {
 
-    console.log("JihanLog :: forgotController");
+    console.log("JihanLog :: changeController");
 
     $scope.submit = function (form) {
         form.submitted = true;
         if (form.$valid) {
-            $scope.forget.reset_url = $location.path();
-            forgotService.forgotPassword($scope.forget, function (data) {
+            changeService.changePassword($scope.reset, function (data) {
                 console.log("JihanLog :: " + JSON.stringify(data));
                 if (data == "Batman") {
                     $scope.invalid = true;
@@ -17,5 +16,7 @@ app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', '$l
             });
         }
     }
+
+
 
 }]);

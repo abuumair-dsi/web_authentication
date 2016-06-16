@@ -1,15 +1,15 @@
 /**
- * Created by jihan on 6/14/16.
+ * Created by jihan on 6/16/16.
  */
-app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', '$location',  function ($scope, $rootScope, loginService, $location) {
+app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', function ($scope, $rootScope, loginService) {
 
     console.log("JihanLog :: forgotController");
 
     $scope.submit = function (form) {
         form.submitted = true;
         if (form.$valid) {
-            $scope.forget.reset_url = $location.path();
-            forgotService.forgotPassword($scope.forget, function (data) {
+            var reset_token = $location.path(); // TODO get reset token from url
+            forgotService.resetPassword(reset_token,$scope.reset, function (data) {
                 console.log("JihanLog :: " + JSON.stringify(data));
                 if (data == "Batman") {
                     $scope.invalid = true;

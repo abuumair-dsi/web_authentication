@@ -68,5 +68,21 @@ app.states = {
                 controller: 'resetController'
             }
         }
+    },
+    'change': {
+        url: '/password/change',
+        views: {
+            '': {
+                templateUrl: 'app/shared/templates/layout/main.html'
+            },
+            'header@reset': {
+                templateUrl: 'app/components/login/loginHeaderView.html',
+                controller: 'loginHeaderController'
+            },
+            'content@reset': {
+                templateUrl: 'app/components/reset_password/changeView.html',
+                controller: 'changeController'
+            }
+        }
     }
 }

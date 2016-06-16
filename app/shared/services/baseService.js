@@ -66,7 +66,7 @@ app.service('baseService', ['$http', function($http) {
         });
     };
 
-    this.login = function($URL, $data, $method, fn) {
+    this.sendWithOutAuth = function($URL, $data, $method, fn) {
         return $http({
             url: this.host1 + $URL,
             headers: {
