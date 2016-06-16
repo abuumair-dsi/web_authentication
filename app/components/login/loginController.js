@@ -11,6 +11,11 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService', funct
             $scope.login.tenant_id = "cc4e0554-6582-498b-9ae2-ad3c612f8e8e";
             loginService.login($scope.login, function (data) {
                 console.log("JihanLog :: " + JSON.stringify(data));
+                setTimeout(
+                    function(){
+                        loginService.accessTokenUpdate();
+                    }
+                    , 10000 * 6);
                 if (data == "Batman") {
                     $scope.invalid = true;
                 }
