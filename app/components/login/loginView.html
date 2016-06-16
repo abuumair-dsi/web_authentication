@@ -9,9 +9,8 @@
         <form action="javascript:void(0)" name="loginFrm" novalidate ng-submit="signin( loginFrm )" role="form">
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" name="email" class="form-control" ng-model="login.email" required>
-                <span ng-show="loginFrm.submitted && loginFrm.email.$error.required" class="error">This field is required</span>
-                <span ng-show="loginFrm.submitted && loginFrm.email.$error.email" class="error">Not a valid Email</span>
+                <input type="text" name="username" class="form-control" ng-model="login.username" required>
+                <span ng-show="loginFrm.submitted && loginFrm.username.$error.required" class="error">This field is required</span>
             </div>
             <div class="form-group">
                 <label>Password</label>
@@ -19,11 +18,11 @@
                 <span ng-show="loginFrm.submitted && loginFrm.password.$error.required" class="error">This field is required</span>
             </div>
             <div class="form-group" >
-                <span ng-show="invalid" class="error">Invalid email address or password!!</span>
+                <span ng-show="invalid" class="error">Invalid username or password!!</span>
             </div>
             <div class="form-group">
                 <div class="col-md-6 col-lg-6">
-                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <input type="submit" value="Login" class="btn btn-primary">
                 </div>
                 <div class="col-md-6 col-lg-6">
                     <!--<input type="button" value="Registration" class="btn btn-primary">-->
@@ -37,6 +36,10 @@
 
     </div>
     <div class="col-md-3 col-lg-3">
+
+        <input type="button" value="LogOut" class="btn btn-primary" ng-click="logOut()">
+
+        <input type="button" value="Get User" class="btn btn-primary" ng-click="getUserInfo()">
         <!--<h4>Sign Up</h4><hr/>-->
 
     </div>

@@ -6,8 +6,8 @@ app.service('baseService', ['$http', function($http) {
         this.host = "./api";
         //this.host = "/";
 
-        // this.host1 = "http://10.0.0.127:8080/hiringappservice/api/v1/";
-        this.host1 = "http://103.245.204.114:8081/hiringappservice/api/v1/"
+        this.host1 = "http://10.0.0.127:8080/authentication/api";
+        // this.host1 = "http://103.245.204.114:8081/authentication/api"
 
         this.service = "";
         
@@ -45,8 +45,32 @@ app.service('baseService', ['$http', function($http) {
             url: this.host1 + $URL,
             headers: {
                 'Content-Type':'application/json',
-                // 'service_key':'32ed9c44-3f54-4195-a3b2-a488ec6b7ba3:71aa3b6c-88c0-49b8-ad42-b2b5f683d7db',
-                'auth_token': $auth_token
+                'Authorization': 'Bearer $('+$auth_token+')'
+            },
+            data: $data,
+            method: $method
+        }).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            if(typeof fn == "function"){
+                if(response.status == 200){
+                    fn(response.data)
+                }else{
+                    fn("Batman")
+                }
+            }
+        }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+            console.log("JihanLog 11 :: "+response);
+        });
+    };
+
+    this.login = function($URL, $data, $method, fn) {
+        return $http({
+            url: this.host1 + $URL,
+            headers: {
+                'Content-Type':'application/json',
             },
             data: $data,
             method: $method

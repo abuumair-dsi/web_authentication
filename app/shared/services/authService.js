@@ -10,18 +10,6 @@ app.service('authService', ['$http', '$rootScope', '$localStorage', 'baseService
                 }
                 console.log("JihanLog :: "+JSON.stringify(data));
             });
-            
-            //return $http({
-            //    method: 'POST',
-            //    url: 'http://10.0.0.127:8080/hiringappservice/api/v1/auth/login',
-            //    headers: {
-            //        'Content-Type': 'application/json',
-            //        'service-key': '0ae3d81c-768c-493f-ae69-865b0fc102c4:d3afd94e-dd4d-4709-9970-78ef90027647'
-            //    },
-            //    data: angular.toJson(model)
-            //}).success(function (data) {
-            //    $localStorage.session = data;
-            //});
 
         };
         
