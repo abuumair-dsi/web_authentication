@@ -38,10 +38,10 @@ app.service('loginService', ['baseService', '$localStorage', 'appUtilsFactory', 
                 baseService.send(appUtilsFactory.ACCESS_TOKEN, $localStorage.access_token, null, 'GET', function (data) {
                     if (data != "Batman") {
                         $localStorage.access_token = data.access_token;
-                        console.log("JihanLog :: " + JSON.stringify(data));
+                        console.log("JihanLog access_token :: " + JSON.stringify(data));
                     }
                 })
-            }, 10000 * 6
+            }, (10000*6*3)
         )
     }
 

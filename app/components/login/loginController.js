@@ -15,7 +15,7 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService', funct
                     function(){
                         loginService.accessTokenUpdate();
                     }
-                    , 10000 * 6);
+                    , (10000 * 6 * 3));
                 if (data == "Batman") {
                     $scope.invalid = true;
                 }

@@ -2,9 +2,9 @@
  * Created by jihan on 6/16/16.
  */
 
-app.controller('changeService', ['$scope', '$rootScope', 'baseService', 'appUtilsFactory', function ($scope, $rootScope, loginService, appUtilsFactory) {
+app.service('changeService', ['baseService', '$localStorage', 'appUtilsFactory', function (baseService, $localStorage, appUtilsFactory) {
 
-    console.log("JihanLog :: resetService");
+    console.log("JihanLog :: changeService");
 
     this.changePassword = function (data,fun) {
         baseService.send(appUtilsFactory.PASSWORD_CHANGE,  $localStorage.access_token, data, 'POST', function (data) {
@@ -14,8 +14,8 @@ app.controller('changeService', ['$scope', '$rootScope', 'baseService', 'appUtil
                 }
                 console.log("JihanLog :: " + JSON.stringify(data));
             }
-
+    
         });
-
+    
     };
 }]);

@@ -1,7 +1,7 @@
 /**
  * Created by jihan on 6/16/16.
  */
-app.controller('resetService', ['appUtilsFactory', '$rootScope', 'baseService', function (appUtilsFactory, $rootScope, baseService) {
+app.service('resetService', ['baseService', '$localStorage', 'appUtilsFactory', function (baseService, $localStorage, appUtilsFactory) {
 
     console.log("JihanLog :: resetService");
 

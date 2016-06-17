@@ -9,14 +9,14 @@ app.states = {
         title: '',
         views: {
             '': {
-                templateUrl: 'app/shared/templates/layout/main.html'
+                templateUrl: 'app/shared/templates/layout/main.tpl.html'
             },
             'header@landing': {
-                templateUrl: 'app/components/landing/landingHeaderView.html',
+                templateUrl: 'app/components/landing/landingHeaderView.tpl.html',
                 controller: 'landingHeaderController'
             },
             'content@landing': {
-                templateUrl: 'app/components/landing/landingView.html',
+                templateUrl: 'app/components/landing/landingView.tpl.html',
                 controller: 'landingController'
             }
         }
@@ -25,14 +25,14 @@ app.states = {
         url: '/login',
         views: {
             '': {
-                templateUrl: 'app/shared/templates/layout/main.html'
+                templateUrl: 'app/shared/templates/layout/main.tpl.html'
             },
             'header@login': {
-                templateUrl: 'app/components/login/loginHeaderView.html',
+                templateUrl: 'app/components/login/loginHeaderView.tpl.html',
                 controller: 'loginHeaderController'
             },
             'content@login': {
-                templateUrl: 'app/components/login/loginView.html',
+                templateUrl: 'app/components/login/loginView.tpl.html',
                 controller: 'loginController'
             }
         }
@@ -41,30 +41,30 @@ app.states = {
         url: '/password/forgot',
         views: {
             '': {
-                templateUrl: 'app/shared/templates/layout/main.html'
+                templateUrl: 'app/shared/templates/layout/main.tpl.html'
             },
             'header@forgot': {
-                templateUrl: 'app/components/login/loginHeaderView.html',
+                templateUrl: 'app/components/login/loginHeaderView.tpl.html',
                 controller: 'loginHeaderController'
             },
             'content@forgot': {
-                templateUrl: 'app/components/forgot_password/forgotView.html',
+                templateUrl: 'app/components/forgot_password/forgotView.tpl.html',
                 controller: 'forgotController'
             }
         }
     },
     'reset': {
-        url: '/password/reset',
+        url: '/password/reset/:reset_token',
         views: {
             '': {
-                templateUrl: 'app/shared/templates/layout/main.html'
+                templateUrl: 'app/shared/templates/layout/main.tpl.html'
             },
             'header@reset': {
-                templateUrl: 'app/components/login/loginHeaderView.html',
+                templateUrl: 'app/components/login/loginHeaderView.tpl.html',
                 controller: 'loginHeaderController'
             },
             'content@reset': {
-                templateUrl: 'app/components/reset_password/resetView.html',
+                templateUrl: 'app/components/reset_password/resetView.tpl.html',
                 controller: 'resetController'
             }
         }
@@ -73,14 +73,14 @@ app.states = {
         url: '/password/change',
         views: {
             '': {
-                templateUrl: 'app/shared/templates/layout/main.html'
+                templateUrl: 'app/shared/templates/layout/main.tpl.html'
             },
-            'header@reset': {
-                templateUrl: 'app/components/login/loginHeaderView.html',
+            'header@change': {
+                templateUrl: 'app/components/login/loginHeaderView.tpl.html',
                 controller: 'loginHeaderController'
             },
-            'content@reset': {
-                templateUrl: 'app/components/reset_password/changeView.html',
+            'content@change': {
+                templateUrl: 'app/components/change_password/changeView.tpl.html',
                 controller: 'changeController'
             }
         }
