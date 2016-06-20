@@ -22,6 +22,10 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService', funct
             });
         }
     }
+    
+    this.singinWithPeram = function () {
+        
+    }
 
 
     $scope.logOut = function () {

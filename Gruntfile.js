@@ -50,9 +50,9 @@ module.exports = function(grunt){
         copy: {
             prod: {
                 files: [
-                    {expand: true, cwd: 'app/templates/', src: ['**'], dest: 'dist/templates/'},
-                    {expand: true, cwd: 'app/assets/images/', src: ['**/*'], dest: 'dist/assets/images/'},
-                    {expand: true, cwd: 'app/assets/css/css/', src: ['**/*'], dest: 'dist/assets/css/'},
+                    // {expand: true, cwd: 'app/templates/', src: ['**'], dest: 'dist/templates/'},
+                    {expand: true, cwd: 'assets/img/', src: ['**/*'], dest: 'dist/assets/img/'},
+                    // {expand: true, cwd: 'app/assets/css/css/', src: ['**/*'], dest: 'dist/assets/css/'},
                     {expand: true, flatten: true, cwd: 'app/', src: ['*'], dest: 'dist/', filter: 'isFile'},
                 ]
             }
