@@ -15,7 +15,7 @@
       <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="/bower_components/angular/angular.js"></script>
       <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-      <script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+      <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
       <script src="/bower_components/moment/moment.js"></script>
       <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
       <script src="/bower_components/ngstorage/ngStorage.min.js"></script>
@@ -25,7 +25,15 @@
   <body>
     <div id="global-alert">
           <div ng-controller="alertCtrl" class="col-md-12">
-              <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+              <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+            </div>
+            <div class="col-md-4">
+
+            </div>
           </div>
     </div>
 
@@ -45,6 +53,7 @@
     <script src="app/shared/factories/constantsFactory.js"></script>
     <script src="app/shared/factories/eventsFactory.js"></script>
     <script src="app/shared/factories/interceptors.js"></script>
+    <script src="app/shared/factories/appExceptionCodeFactory.js"></script>
 
     <!-- Shared/ Factories End -->
 

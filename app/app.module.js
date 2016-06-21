@@ -50,7 +50,7 @@ app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authServi
 
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
-    $httpProvider.interceptors.push('globalRequestInterceptor');
+    // $httpProvider.interceptors.push('globalRequestInterceptor');
 
     //  UI-Route
     for( state in app.states ){

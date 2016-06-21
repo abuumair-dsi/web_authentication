@@ -1,4 +1,4 @@
-app.service('baseService', ['$http', function($http) {
+app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', function($http, appExceptionCodeFactory, $rootScope) {
 
         'use strict';
 
@@ -54,17 +54,62 @@ app.service('baseService', ['$http', function($http) {
             // when the response is available
             if(typeof fn == "function"){
                 if(response.status == 200){
+                    //console.log("JihanLog :: success");
                     fn(response.data)
                 }else{
+                    console.log("JihanLog :: "+JSON.stringify(response));
+                    console.log("JihanLog :: Batman");
                     fn("Batman")
                 }
             }
         }, function errorCallback(response) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-            console.log("JihanLog 11 :: "+response);
+            console.log("JihanLog 11 :: "+JSON.stringify(response));
+            exceptionMsg(response)
         });
     };
+
+
+
+    function exceptionMsg(response){
+        if(response.data == null ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Server Not Found' });
+        }else if(appExceptionCodeFactory.E_0001 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0002 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0003 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0004 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0005 == response.data.errorCode ){
+            if(response.data.errorContext.entity){
+                $rootScope.alerts .push( { type: 'danger', msg: 'User Id or password not found' });
+            }else{
+                $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' not found' });
+            }
+
+        }else if(appExceptionCodeFactory.E_0006 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0007 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Session timeout! Please login again' });
+        }else if(appExceptionCodeFactory.E_0008 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0009 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0010 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }else if(appExceptionCodeFactory.E_0011 == response.data.errorCode ){
+            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+        }
+
+        setTimeout(function(){
+            if($rootScope.alerts.length >0 ){
+                console.log("JihanLog :: from baseService "+$rootScope.alerts.length);
+                $rootScope.alerts.splice(0, 1);
+            }
+        }, 5000);
+    }
+
 
     this.sendWithOutAuth = function($URL, $data, $method, fn) {
         return $http({
@@ -81,13 +126,15 @@ app.service('baseService', ['$http', function($http) {
                 if(response.status == 200){
                     fn(response.data)
                 }else{
+                    console.log("JihanLog :: "+JSON.stringify(response.data));
                     fn("Batman")
                 }
             }
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
-            console.log("JihanLog 11 :: "+response);
+            exceptionMsg(response)
+            console.log("JihanLog 11 :: "+JSON.stringify(response));
         });
     };
 
@@ -112,7 +159,7 @@ app.service('baseService', ['$http', function($http) {
                 }
             }
         }, function errorCallback(response) {
-            console.log("JihanLog 11 :: "+response);
+            console.log("JihanLog 11 :: "+JSON.stringify(response));
         });
     };
 

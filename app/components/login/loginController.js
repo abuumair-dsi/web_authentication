@@ -1,9 +1,13 @@
 /**
  * Created by jihan on 6/14/16.
  */
-app.controller('loginController', ['$scope', '$rootScope', 'loginService', function ($scope, $rootScope, loginService) {
+app.controller('loginController', ['$scope', '$rootScope', 'loginService',  function ($scope, $rootScope, loginService) {
 
     console.log("JihanLog :: loginController");
+
+    // $scope.alerts = [ { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' }];
+
+
 
     $scope.signin = function (form) {
         form.submitted = true;
@@ -41,7 +45,7 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService', funct
         loginService.userInfo(function (data) {
             console.log("JihanLog :: " + JSON.stringify(data));
             if (data != "Batman") {
-
+        
             }
         });
     }

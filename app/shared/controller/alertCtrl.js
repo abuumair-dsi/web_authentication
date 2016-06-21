@@ -14,6 +14,7 @@ app.controller('alertCtrl', ['$scope', '$rootScope', function( $scope, $rootScop
     //  Watcher
     $scope.$watchCollection('alerts', function( newVal ){
         var index = newVal.length-1;
+        console.log("JihanLog :: $watchCollection "+index);
         if( typeof( newVal[index] ) != 'undefined' && newVal[index].fade ){
             setTimeout(function(){
                 console.log( index );
