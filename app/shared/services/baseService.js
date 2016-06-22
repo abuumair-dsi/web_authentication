@@ -74,32 +74,31 @@ app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', fu
         if(response.data == null ){
             $rootScope.alerts .push( { type: 'danger', msg: 'Server Not Found' });
         }else if(appExceptionCodeFactory.E_0001 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.id+' of '+response.data.errorContext.entity+' not defined' });
         }else if(appExceptionCodeFactory.E_0002 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' creation failed' });
         }else if(appExceptionCodeFactory.E_0003 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' upadte failed'  });
         }else if(appExceptionCodeFactory.E_0004 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' delete failed'  });
         }else if(appExceptionCodeFactory.E_0005 == response.data.errorCode ){
-            if(response.data.errorContext.entity){
+            if(response.data.errorContext.entity == 'Login'){
                 $rootScope.alerts .push( { type: 'danger', msg: 'User Id or password not found' });
             }else{
                 $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' not found' });
             }
-
         }else if(appExceptionCodeFactory.E_0006 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: 'Instance initialization failed. ' });
         }else if(appExceptionCodeFactory.E_0007 == response.data.errorCode ){
             $rootScope.alerts .push( { type: 'danger', msg: 'Session timeout! Please login again' });
         }else if(appExceptionCodeFactory.E_0008 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.id+' missing' });
         }else if(appExceptionCodeFactory.E_0009 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: 'JSON read/write failed : '+ response.data.errorContext.developerMessage });
         }else if(appExceptionCodeFactory.E_0010 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.entity+' not match' });
         }else if(appExceptionCodeFactory.E_0011 == response.data.errorCode ){
-            $rootScope.alerts .push( { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' });
+            $rootScope.alerts .push( { type: 'danger', msg: 'Password hash failed : '+ response.data.errorContext.developerMessage  });
         }
 
         setTimeout(function(){
@@ -107,7 +106,7 @@ app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', fu
                 console.log("JihanLog :: from baseService "+$rootScope.alerts.length);
                 $rootScope.alerts.splice(0, 1);
             }
-        }, 5000);
+        }, 3000);
     }
 
 
