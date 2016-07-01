@@ -6,7 +6,7 @@ app.controller('landingHeaderController', ['$scope', '$rootScope', '$state', fun
 
     $scope.routeLogin = function(){
         $state.go('login');
-    }
+    };
 
 
 }]);

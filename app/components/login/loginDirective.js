@@ -9,6 +9,6 @@ app.directive('login', function(){
             return element.url;
         },
         controller: 'loginController'
-    }
+    };
 
 });

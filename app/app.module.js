@@ -53,7 +53,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationP
     // $httpProvider.interceptors.push('globalRequestInterceptor');
 
     //  UI-Route
-    for( state in app.states ){
+    for( var state in app.states ){
         $stateProvider.state( state, app.states[state] );
     }
     $urlRouterProvider.otherwise('/');

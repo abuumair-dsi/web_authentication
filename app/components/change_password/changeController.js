@@ -16,7 +16,7 @@ app.controller('changeController', ['$scope', '$rootScope', 'changeService', fun
                 }
             });
         }
-    }
+    };
 
 
 

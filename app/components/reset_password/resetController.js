@@ -8,7 +8,7 @@ app.controller('resetController', ['$scope', '$location', 'resetService','$state
     $scope.submit = function (form) {
         form.submitted = true;
         if (form.$valid) {
-            var reset_token = $stateParams.reset_token // TODO get reset token from url
+            var reset_token = $stateParams.reset_token; // TODO get reset token from url
             console.log("JihanLog :: "+reset_token);
             resetService.resetPassword(reset_token,$scope.reset, function (data) {
                 console.log("JihanLog :: " + JSON.stringify(data));
@@ -17,6 +17,6 @@ app.controller('resetController', ['$scope', '$location', 'resetService','$state
                 }
             });
         }
-    }
+    };
 
 }]);

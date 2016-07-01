@@ -6,7 +6,7 @@ app.directive('landing', function(){
             return element.url;
         },
         controller: 'landingController'
-    }
+    };
 
 });
 

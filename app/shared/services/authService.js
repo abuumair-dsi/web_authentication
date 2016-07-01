@@ -23,7 +23,7 @@ app.service('authService', ['$http', '$rootScope', '$localStorage', 'baseService
 
         //  returns userinfo from localstorage
         this.userInfo = function () {
-            return $localStorage.session == null ? {} : $localStorage.session;
+            return $localStorage.session === null ? {} : $localStorage.session;
         };
 
         this.userInfoNull = function () {
@@ -41,8 +41,8 @@ app.service('authService', ['$http', '$rootScope', '$localStorage', 'baseService
         };
 
         this.getUser = function(){
-            return $localStorage.session
-        }
+            return $localStorage.session;
+        };
 
         //  returns boolean true if user is logged in
         this.isLoggedIn = function () {

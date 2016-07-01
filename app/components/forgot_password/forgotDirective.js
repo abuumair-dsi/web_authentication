@@ -9,6 +9,6 @@ app.directive('forgot', function(){
             return element.url;
         },
         controller: 'forgotController'
-    }
+    };
 
 });

@@ -4,7 +4,7 @@
 app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', '$location',  function ($scope, $rootScope, forgotService, $location) {
 
     console.log("JihanLog :: forgotController");
-    $scope.forget = {}
+    $scope.forget = {};
 
     $scope.submit = function (form) {
         form.submitted = true;
@@ -18,6 +18,6 @@ app.controller('forgotController', ['$scope', '$rootScope', 'forgotService', '$l
                 }
             });
         }
-    }
+    };
 
 }]);

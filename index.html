@@ -5,20 +5,33 @@
 
       <!--Vendor Start-->
 
-      <link href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css">
-      <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-      <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="assets/css/result.css" rel="stylesheet" type="text/css">
-      <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- build:css css/style.min.css -->
 
-      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script src="/bower_components/angular/angular.js"></script>
-      <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-      <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-      <script src="/bower_components/moment/moment.js"></script>
-      <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-      <script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+    <link href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/result.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+
+    <!-- endbuild -->
+
+
+    <!-- build:js views.tpl.js -->
+
+    <div> jihan </div>
+
+    <!-- endbuild -->
+
 
       <!--Vendor End-->
   </head>
@@ -41,6 +54,7 @@
     <div ui-view></div>
 
 
+    <!-- build:js js/all.min.js -->
 
     <!--Project JS Start-->
 
@@ -64,7 +78,7 @@
     <!-- Shared/ Services End -->
 
     <!-- Shared/ Controller Start -->
-    <script src="app/shared/controller/alertCtrl.js"></script>
+    <script src="app/shared/controller/alertController.js"></script>
 
     <!-- Shared/ Controller End -->
 
@@ -102,6 +116,8 @@
 
 
     <!--Project JS End-->
+
+    <!-- endbuild -->
 
   </body>
 </html>

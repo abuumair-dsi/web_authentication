@@ -9,6 +9,6 @@ app.directive('change', function(){
             return element.url;
         },
         controller: 'changeController'
-    }
+    };
 
 });

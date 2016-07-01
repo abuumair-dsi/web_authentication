@@ -55,23 +55,23 @@ app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', fu
             if(typeof fn == "function"){
                 if(response.status == 200){
                     //console.log("JihanLog :: success");
-                    fn(response.data)
+                    fn(response.data);
                 }else{
                     console.log("JihanLog :: "+JSON.stringify(response));
                     console.log("JihanLog :: Batman");
-                    fn("Batman")
+                    fn("Batman");
                 }
             }
         }, function errorCallback(response) {
             console.log("JihanLog 11 :: "+JSON.stringify(response));
-            exceptionMsg(response)
+            exceptionMsg(response);
         });
     };
 
 
 
     function exceptionMsg(response){
-        if(response.data == null ){
+        if(response.data === null ){
             $rootScope.alerts .push( { type: 'danger', msg: 'Server Not Found' });
         }else if(appExceptionCodeFactory.E_0001 == response.data.errorCode ){
             $rootScope.alerts .push( { type: 'danger', msg: response.data.errorContext.id+' of '+response.data.errorContext.entity+' not defined' });
@@ -123,16 +123,16 @@ app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', fu
             // when the response is available
             if(typeof fn == "function"){
                 if(response.status == 200){
-                    fn(response.data)
+                    fn(response.data);
                 }else{
                     console.log("JihanLog :: "+JSON.stringify(response.data));
-                    fn("Batman")
+                    fn("Batman");
                 }
             }
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
-            exceptionMsg(response)
+            exceptionMsg(response);
             console.log("JihanLog 11 :: "+JSON.stringify(response));
         });
     };
@@ -152,9 +152,9 @@ app.service('baseService', ['$http', 'appExceptionCodeFactory', '$rootScope', fu
             if(typeof fn == "function"){
                 if(response.status == 200){
                     console.log("JihanLog :: 200");
-                    fn(response.data)
+                    fn(response.data);
                 }else{
-                    fn("Batman")
+                    fn("Batman");
                 }
             }
         }, function errorCallback(response) {

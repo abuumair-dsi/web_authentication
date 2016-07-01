@@ -269,7 +269,6 @@ html, body {
     height:3em;
     padding: 15px;
     color:grey;
-@include border-radius(0px);
 }
 
 /*.md-scroll-mask{*/

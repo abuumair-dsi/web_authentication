@@ -16,7 +16,7 @@ app.service('loginService', ['baseService', '$localStorage', 'appUtilsFactory', 
             }
 
         });
-    }
+    };
 
     this.logOut = function (fun) {
         baseService.send(appUtilsFactory.LOGIN_SESSION, $localStorage.access_token, null, 'DELETE', function (data) {
@@ -40,10 +40,10 @@ app.service('loginService', ['baseService', '$localStorage', 'appUtilsFactory', 
                         $localStorage.access_token = data.access_token;
                         console.log("JihanLog access_token :: " + JSON.stringify(data));
                     }
-                })
+                });
             }, (10000*6*3)
-        )
-    }
+        );
+    };
 
     this.userInfo = function () {
 
@@ -52,13 +52,13 @@ app.service('loginService', ['baseService', '$localStorage', 'appUtilsFactory', 
                 $localStorage.session = data;
                 console.log("JihanLog :: " + JSON.stringify(data));
             }
-        })
+        });
     };
 
 
     this.getUser = function () {
-        return $localStorage.session
-    }
+        return $localStorage.session;
+    };
 
 
 }]);

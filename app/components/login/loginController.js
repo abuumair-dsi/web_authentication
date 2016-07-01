@@ -18,18 +18,17 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService',  func
                 setTimeout(
                     function(){
                         loginService.accessTokenUpdate();
-                    }
-                    , (10000 * 6 * 3));
+                    }, (10000 * 6 * 3));
                 if (data == "Batman") {
                     $scope.invalid = true;
                 }
             });
         }
-    }
+    };
     
     this.singinWithPeram = function () {
         
-    }
+    };
 
 
     $scope.logOut = function () {
@@ -39,16 +38,16 @@ app.controller('loginController', ['$scope', '$rootScope', 'loginService',  func
 
             }
         });
-    }
+    };
 
     $scope.getUserInfo = function () {
         loginService.userInfo(function (data) {
             console.log("JihanLog :: " + JSON.stringify(data));
             if (data != "Batman") {
-        
+
             }
         });
-    }
+    };
     
 
 }]);

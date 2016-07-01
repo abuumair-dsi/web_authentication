@@ -10,7 +10,8 @@ app.factory('constantsFactory', [function(){
             if( reasonCode in this.constants )
                 return this.constants[reasonCode];
             
-            return this.constants['basic'];
+            // return this.constants['basic'];
+            return this.constants.basic;
             
         }
     };

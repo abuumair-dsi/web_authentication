@@ -9,6 +9,6 @@ app.directive('reset', function(){
             return element.url;
         },
         controller: 'resetController'
-    }
+    };
 
 });
